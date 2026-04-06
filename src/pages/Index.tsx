@@ -212,8 +212,7 @@ export default function Index() {
             <div className="fade-in-up delay-3 hidden md:flex" style={{ justifyContent: "center", alignItems: "center" }}>
               <div style={{
                 width: 320,
-                background: "rgba(244,228,155,0.08)",
-                border: "1px solid rgba(244,228,155,0.2)",
+                background: "var(--yellow)",
                 display: "flex", flexDirection: "column",
                 alignItems: "center", justifyContent: "center",
                 padding: "40px 32px 32px",
@@ -226,13 +225,13 @@ export default function Index() {
                   style={{ width: 220, height: "auto", display: "block", marginBottom: 24 }}
                 />
                 <div style={{
-                  width: "100%", borderTop: "1px solid rgba(244,228,155,0.2)",
+                  width: "100%", borderTop: "1px solid rgba(31,78,88,0.2)",
                   paddingTop: 20, textAlign: "center",
                 }}>
-                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "rgba(244,228,155,0.5)", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 6 }}>
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "var(--teal-dark)", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 6, fontWeight: 600 }}>
                     Якушева д.3
                   </div>
-                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "rgba(244,228,155,0.5)", letterSpacing: "0.1em" }}>
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "var(--teal)", letterSpacing: "0.1em" }}>
                     scarabuk.ru
                   </div>
                 </div>
