@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import Icon from "@/components/ui/icon";
 
-const LOGO_IMG = "https://cdn.poehali.dev/projects/db7fef00-a717-4e83-bb30-16a24c1df53c/bucket/fab0f056-cad7-4740-ae66-ffd132f3cfcf.jpg";
+const LOGO_IMG = "https://cdn.poehali.dev/projects/db7fef00-a717-4e83-bb30-16a24c1df53c/bucket/0d6454bc-c28e-48be-a779-d1572a6c1486.png";
 
 const BOOKS = [
   { id: 1, title: "Война и мир", author: "Лев Толстой", genre: "Классика", price: "590 ₽", year: 1869, desc: "Эпопея о судьбах людей в эпоху наполеоновских войн", rating: 5, badge: "Хит" },
@@ -81,24 +81,12 @@ export default function Index() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 66 }}>
 
             {/* Logo */}
-            <button onClick={() => scrollTo("home")} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }}>
-              <div style={{
-                width: 46, height: 46,
-                borderRadius: "50%",
-                overflow: "hidden", flexShrink: 0,
-                border: "2px solid var(--yellow)",
-                boxShadow: "0 0 0 1px rgba(244,228,155,0.3)",
-              }}>
-                <img src={LOGO_IMG} alt="Скарабук" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
-              </div>
-              <div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--yellow)", lineHeight: 1, letterSpacing: "0.04em" }}>
-                  СКАРАБУК
-                </div>
-                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.58rem", color: "rgba(244,228,155,0.7)", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 1 }}>
-                  книжный магазин
-                </div>
-              </div>
+            <button onClick={() => scrollTo("home")} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}>
+              <img
+                src={LOGO_IMG}
+                alt="Скарабук — книжный магазин"
+                style={{ height: 52, width: "auto", display: "block" }}
+              />
             </button>
 
             {/* Desktop Nav */}
@@ -581,8 +569,8 @@ export default function Index() {
       <footer style={{ background: "var(--dark)", padding: "32px 24px", borderTop: "3px solid var(--teal)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <div>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.3rem", fontWeight: 700, color: "var(--yellow)" }}>СКАРАБУК</div>
-            <div style={{ fontFamily: "'Montserrat'", fontSize: "0.62rem", color: "rgba(245,240,168,0.3)", marginTop: 3, letterSpacing: "0.1em" }}>© 2026 · Книжный магазин · Якушева д.3</div>
+            <img src={LOGO_IMG} alt="Скарабук" style={{ height: 44, width: "auto", display: "block", marginBottom: 4 }} />
+            <div style={{ fontFamily: "'Montserrat'", fontSize: "0.62rem", color: "rgba(244,228,155,0.35)", letterSpacing: "0.1em" }}>© 2026 · Якушева д.3</div>
           </div>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {navItems.map(item => (
