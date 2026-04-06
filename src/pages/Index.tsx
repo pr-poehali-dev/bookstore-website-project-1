@@ -263,7 +263,7 @@ export default function Index() {
                 borderBottom: "5px solid var(--yellow)",
               }}>
                 <div style={{ fontSize: "3.5rem", marginBottom: 20 }}>📖</div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.2rem", fontWeight: 400, color: "var(--yellow)", marginBottom: 12, lineHeight: 1.2 }}>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 400, color: "var(--yellow)", marginBottom: 12, lineHeight: 1.15 }}>
                   «Любимая литература по доступной цене»
                 </div>
                 <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.72rem", color: "rgba(245,240,168,0.6)", letterSpacing: "0.1em" }}>
