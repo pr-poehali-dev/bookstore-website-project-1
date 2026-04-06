@@ -211,33 +211,30 @@ export default function Index() {
             {/* Visual card */}
             <div className="fade-in-up delay-3 hidden md:flex" style={{ justifyContent: "center", alignItems: "center" }}>
               <div style={{
-                width: 300, height: 380,
-                background: "var(--yellow)",
+                width: 320,
+                background: "rgba(244,228,155,0.08)",
+                border: "1px solid rgba(244,228,155,0.2)",
                 display: "flex", flexDirection: "column",
                 alignItems: "center", justifyContent: "center",
-                padding: 32,
-                boxShadow: "12px 12px 0 rgba(22,60,60,0.3), -4px -4px 0 rgba(245,240,168,0.15)",
+                padding: "40px 32px 32px",
+                boxShadow: "0 24px 64px rgba(0,0,0,0.3)",
                 position: "relative",
               }}>
-                <div style={{ fontSize: "5rem", marginBottom: 16 }}>📚</div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2rem", fontWeight: 700, color: "var(--teal-dark)", textAlign: "center", lineHeight: 1.1 }}>
-                  СКАРАБУК
-                </div>
-                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "var(--teal)", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: 8 }}>
-                  книжный магазин
-                </div>
+                <img
+                  src={LOGO_IMG}
+                  alt="Скарабук"
+                  style={{ width: 220, height: "auto", display: "block", marginBottom: 24 }}
+                />
                 <div style={{
-                  position: "absolute", bottom: 0, left: 0, right: 0,
-                  background: "var(--teal)", height: 6,
-                }} />
-                <div style={{
-                  position: "absolute", top: 16, right: 16,
-                  background: "var(--teal)", color: "var(--yellow)",
-                  fontFamily: "'Montserrat', sans-serif", fontSize: "0.58rem",
-                  fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
-                  padding: "4px 10px",
+                  width: "100%", borderTop: "1px solid rgba(244,228,155,0.2)",
+                  paddingTop: 20, textAlign: "center",
                 }}>
-                  Якушева д.3
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "rgba(244,228,155,0.5)", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 6 }}>
+                    Якушева д.3
+                  </div>
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.65rem", color: "rgba(244,228,155,0.5)", letterSpacing: "0.1em" }}>
+                    scarabuk.ru
+                  </div>
                 </div>
               </div>
             </div>
