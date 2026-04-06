@@ -83,19 +83,19 @@ export default function Index() {
             {/* Logo */}
             <button onClick={() => scrollTo("home")} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }}>
               <div style={{
-                width: 40, height: 40, borderRadius: "50%",
-                background: "var(--yellow)",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                width: 46, height: 46,
+                borderRadius: "50%",
                 overflow: "hidden", flexShrink: 0,
-                fontSize: "1.3rem",
+                border: "2px solid var(--yellow)",
+                boxShadow: "0 0 0 1px rgba(244,228,155,0.3)",
               }}>
-                📚
+                <img src={LOGO_IMG} alt="Скарабук" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
               </div>
               <div>
                 <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--yellow)", lineHeight: 1, letterSpacing: "0.04em" }}>
                   СКАРАБУК
                 </div>
-                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.58rem", color: "rgba(245,240,168,0.7)", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 1 }}>
+                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.58rem", color: "rgba(244,228,155,0.7)", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 1 }}>
                   книжный магазин
                 </div>
               </div>
