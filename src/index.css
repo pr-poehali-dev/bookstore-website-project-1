@@ -4,54 +4,55 @@
 
 @layer base {
   :root {
-    --background: 38 30% 97%;
-    --foreground: 25 30% 12%;
+    --background: 60 60% 94%;
+    --foreground: 190 40% 15%;
 
-    --card: 38 25% 94%;
-    --card-foreground: 25 30% 12%;
+    --card: 58 55% 96%;
+    --card-foreground: 190 40% 15%;
 
-    --popover: 38 25% 94%;
-    --popover-foreground: 25 30% 12%;
+    --popover: 58 55% 96%;
+    --popover-foreground: 190 40% 15%;
 
-    --primary: 25 30% 12%;
-    --primary-foreground: 38 30% 97%;
+    --primary: 182 46% 36%;
+    --primary-foreground: 58 80% 92%;
 
-    --secondary: 38 20% 88%;
-    --secondary-foreground: 25 30% 12%;
+    --secondary: 58 60% 88%;
+    --secondary-foreground: 182 46% 36%;
 
-    --muted: 38 20% 90%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 58 40% 88%;
+    --muted-foreground: 190 20% 45%;
 
-    --accent: 38 70% 50%;
-    --accent-foreground: 25 30% 12%;
+    --accent: 182 46% 36%;
+    --accent-foreground: 58 80% 92%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 38 30% 97%;
+    --destructive-foreground: 58 80% 92%;
 
-    --border: 38 20% 82%;
-    --input: 38 20% 82%;
-    --ring: 38 70% 50%;
+    --border: 182 20% 75%;
+    --input: 182 20% 75%;
+    --ring: 182 46% 36%;
 
     --radius: 0.25rem;
 
-    /* Custom book shop vars */
-    --gold: #c9973a;
-    --gold-light: #e8c068;
-    --gold-dark: #9a6f20;
-    --cream: #f7f3ec;
-    --dark-brown: #1e140a;
-    --medium-brown: #5c3d1e;
-    --warm-gray: #8b7b6b;
-    --parchment: #f0e8d8;
+    --teal: #2d8b8a;
+    --teal-dark: #1e6867;
+    --teal-light: #4aa9a8;
+    --teal-pale: #e8f5f5;
+    --yellow: #f5f0a8;
+    --yellow-dark: #e8e080;
+    --yellow-deep: #c8b840;
+    --cream: #fafaf0;
+    --dark: #163c3c;
+    --mid: #2d6060;
 
-    --sidebar-background: 38 20% 92%;
-    --sidebar-foreground: 25 30% 12%;
-    --sidebar-primary: 25 30% 12%;
-    --sidebar-primary-foreground: 38 30% 97%;
-    --sidebar-accent: 38 20% 85%;
-    --sidebar-accent-foreground: 25 30% 12%;
-    --sidebar-border: 38 20% 82%;
-    --sidebar-ring: 38 70% 50%;
+    --sidebar-background: 58 55% 94%;
+    --sidebar-foreground: 190 40% 15%;
+    --sidebar-primary: 182 46% 36%;
+    --sidebar-primary-foreground: 58 80% 92%;
+    --sidebar-accent: 58 40% 88%;
+    --sidebar-accent-foreground: 182 46% 36%;
+    --sidebar-border: 182 20% 75%;
+    --sidebar-ring: 182 46% 36%;
   }
 }
 
@@ -59,51 +60,36 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--cream);
-    color: var(--dark-brown);
+    color: var(--dark);
   }
-
   h1,
   h2,
   h3,
-  h4,
-  h5 {
+  h4 {
     font-family: "Cormorant Garamond", serif;
   }
 }
 
-/* Decorative ornament line */
-.ornament-line {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--gold);
-}
-.ornament-line::before,
-.ornament-line::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
+html {
+  scroll-behavior: smooth;
 }
 
-/* Navigation link hover */
 .nav-link {
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.25s;
 }
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -3px;
   left: 0;
   width: 0;
-  height: 1px;
-  background: var(--gold);
+  height: 2px;
+  background: var(--yellow);
   transition: width 0.3s ease;
 }
 .nav-link:hover::after,
@@ -111,69 +97,108 @@
   width: 100%;
 }
 
-/* Book card */
+.btn-teal {
+  background: var(--teal);
+  color: var(--yellow);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px 28px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  display: inline-block;
+}
+.btn-teal:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline-teal {
+  background: transparent;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 26px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-outline-teal:hover {
+  background: var(--teal);
+  color: var(--yellow);
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--teal-dark);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px 28px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  display: inline-block;
+}
+.btn-yellow:hover {
+  background: var(--yellow-dark);
+  transform: translateY(-1px);
+}
+
 .book-card {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+  background: #fff;
 }
 .book-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(30, 20, 10, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(45, 139, 138, 0.18);
 }
 
-/* Gold button */
-.btn-gold {
-  background: linear-gradient(
-    135deg,
-    var(--gold-light),
-    var(--gold),
-    var(--gold-dark)
-  );
-  color: var(--dark-brown);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 10px 28px;
-  border: none;
-  cursor: pointer;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+.search-input {
+  background: #fff;
+  border: 2px solid var(--teal);
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark);
+  padding: 12px 48px 12px 18px;
+  width: 100%;
+  outline: none;
+  font-size: 0.9rem;
+  transition: box-shadow 0.2s;
 }
-.btn-gold:hover {
-  opacity: 0.88;
-  transform: translateY(-1px);
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(45, 139, 138, 0.2);
+}
+.search-input::placeholder {
+  color: #9bb8b8;
 }
 
-/* Outline button */
-.btn-outline-gold {
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 10px 28px;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+.star-filled {
+  color: var(--yellow-deep);
 }
-.btn-outline-gold:hover {
-  background: var(--gold);
-  color: var(--dark-brown);
+.star-empty {
+  color: #ccc;
 }
 
-/* Section fade-in */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(28px);
   }
   to {
     opacity: 1;
@@ -181,7 +206,7 @@
   }
 }
 .fade-in-up {
-  animation: fadeInUp 0.6s ease forwards;
+  animation: fadeInUp 0.65s ease forwards;
 }
 .delay-1 {
   animation-delay: 0.1s;
@@ -192,81 +217,46 @@
   opacity: 0;
 }
 .delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.35s;
   opacity: 0;
 }
 .delay-4 {
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-.delay-5 {
   animation-delay: 0.5s;
   opacity: 0;
 }
-.delay-6 {
-  animation-delay: 0.6s;
+.delay-5 {
+  animation-delay: 0.65s;
   opacity: 0;
 }
 
-/* Pattern background */
-.pattern-bg {
+.diamond-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--teal);
+}
+.diamond-divider::before,
+.diamond-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--teal), transparent);
+}
+
+.pattern-dots {
   background-color: var(--cream);
   background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(201, 151, 58, 0.12) 1px,
-    transparent 0
+    circle,
+    rgba(45, 139, 138, 0.1) 1px,
+    transparent 1px
   );
-  background-size: 24px 24px;
+  background-size: 20px 20px;
 }
 
-/* Search input */
-.search-input {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--gold);
-  border-radius: 0;
-  font-family: "IBM Plex Sans", sans-serif;
-  color: var(--dark-brown);
-  padding: 12px 48px 12px 18px;
-  width: 100%;
-  outline: none;
-  transition: box-shadow 0.2s ease;
-}
-.search-input:focus {
-  box-shadow: 0 0 0 2px rgba(201, 151, 58, 0.3);
-}
-.search-input::placeholder {
-  color: var(--warm-gray);
-}
-
-/* Star rating */
-.star-filled {
-  color: var(--gold);
-}
-.star-empty {
-  color: var(--warm-gray);
-  opacity: 0.4;
-}
-
-/* Divider ornament */
-.divider-ornament {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--gold);
-  letter-spacing: 0.4em;
-  margin: 0;
-  user-select: none;
-}
-
-/* Scroll smooth */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Mobile menu */
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
@@ -274,5 +264,5 @@ html {
   }
 }
 .mobile-menu-open {
-  animation: slideDown 0.25s ease forwards;
+  animation: slideDown 0.22s ease forwards;
 }
